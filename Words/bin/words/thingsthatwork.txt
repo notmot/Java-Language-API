@@ -1,0 +1,83 @@
+ while(true){
+				//Thread.sleep(500);
+			String[] set = {"noun","verb","is","a","sport","played","prep","two","teams.","Each","noun","has","nine","noun","In","noun","one","noun","throws","a","adj","prep","noun","called","a","noun","and","the","adj","noun","tries","prep","hit","it","prep","a","noun","called","a","bat.","Teams","score","points","prep","running","and","touching","markers","prep","the","noun","called","bases","prep","they","verb","the","adj","one,","called","home","plate.","Baseball","started","prep","the","United","States","prep","the","1700s","and","1800s,","prep","historians","are","not","sure","who","invented","it.","Many","people","prep","North","America,","South","America,","and","East","Asia","noun","baseball.","In","the","United","States,","noun","is","called","the","national","pastime,","because","so","many","people","prep","the","United","States","spend","a","lot","prep","noun","playing","or","watching","noun","noun","noun"};
+				 //	 String[] set = {Types.gettype("dog"),Types.gettype("baseball"),Types.gettype("is"),Types.gettype("a"),Types.gettype("sport"),Types.gettype("played"),Types.gettype("by"),Types.gettype("two"),Types.gettype("teams")};
+				for(int i=0; i<set.length; i++){
+				      String ret ="";
+				      String now = words.Types.randomthing(set[i])+" ";
+				      System.out.print(now);
+				     Process p = Runtime.getRuntime().exec("say "+now);
+					   p.waitFor();
+				 }
+				System.out.println();
+			
+		}
+		
+		
+		
+		
+		
+		/*while(true){
+			Thread.sleep(500);
+			System.out.println(words.Types.randomthing("no"));
+			System.out.println("so, the other day I was "+words.Types.randomverb()+"ing "+words.Types.randomprep()+" the "+words.Types.randomadj()+" "+words.Types.randomnoun()+" when the "+words.Types.randomnoun()+" "+words.Types.randomverb()+"ed "+words.Types.randomprep());
+			
+		}*/
+		
+		
+		
+		
+		
+		package words;
+
+import java.io.IOException;
+//	String[] set = {"fuck your","noun","fuck your","noun","fuck your","noun","and fuck your","adj","ass","noun","bitch, this is America"};
+//String[] set = {"prep","the","adj","noun","of the","adj","noun", ""};
+	//String[] set = {"prep","the","adj","noun","of the","adj","noun","that","verb","the","adj","noun"};
+	//String[] set = {"prep","the","noun"};
+public class Main {
+	//public static String[] read=null;
+	public static String buf = "";
+	static String fulltext = "add dog Baseball is a sport played by two teams. Each team has nine players. In baseball, one team throws a small round ball called a baseball and the other team tries to hit it with a club called a bat. Teams score points by running and touching markers on the ground called bases until they reach the last one, called home plate. Baseball started in the United States in the 1700s and 1800s, but historians are not sure who invented it. Many people in North America, South America, and East Asia play baseball. In the United States, baseball is called the national pastime, because so many people in the United States spend a lot of time playing or watching baseball game dog";
+	public static String[] wrds = fulltext.split(" ");
+	public static String[] read = fulltext.split(" ");
+	public static void main(String[] args) throws InterruptedException, IOException {
+		// TODO Auto-generated method stub
+		//collective noun you can verb
+		//	System.out.println("so, the other day I was "+words.Types.randomverb()+"ing "+words.Types.randomprep()+" the "+words.Types.randomnoun()+" when the "+words.Types.randomnoun()+" "+words.Types.randomverb()+"ed "+words.Types.randomprep());
+		for(int i=0;i<wrds.length;i++){
+			buf = wrds[i];
+			//System.out.print("\""+words.Types.gettype(buf)+"\",");
+			read[i]=words.Types.gettype(buf);
+		}
+	String[] set = {"verb","noun","noun","noun","a","noun","verb","prep","two","noun.","Each","noun","has","nine","noun","In","baseball,","one","noun","throws","a","small","round","noun","called","a","noun","and","the","other","noun","tries","to","hit","it","with","a","noun","called","a","noun","Teams","score","points","by","running","and","touching","markers","on","the","noun","called","bases","until","they","verb","the","last","one,","called","home","noun","noun","started","in","the","United","States","in","the","1700s","and","1800s,","but","historians","are","not","sure","who","invented","it.","Many","people","in","noun","America,","South","America,","and","East","Asia","noun","noun","In","the","United","States,","noun","is","called","the","national","pastime,","because","so","many","people","in","the","United","States","spend","a","lot","of","noun","playing","or","watching","noun","noun","noun"};
+while(true){
+	for(int i=0; i<set.length; i++){
+	      String ret ="";
+	      String now = words.Types.randomthing(read[i])+" ";
+	      System.out.print(now);
+	}
+	System.out.println();
+
+}
+}
+}
+
+
+
+
+	// TODO Auto-generated method stub
+		//collective noun you can verb
+		//	System.out.println("so, the other day I was "+words.Types.randomverb()+"ing "+words.Types.randomprep()+" the "+words.Types.randomnoun()+" when the "+words.Types.randomnoun()+" "+words.Types.randomverb()+"ed "+words.Types.randomprep());
+			
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			
+
+
+		
