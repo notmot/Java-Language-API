@@ -84,6 +84,45 @@ while(true){
 			 
 			 
 			 
+			 package words;
+
+import java.io.IOException;
+
+import javax.swing.JOptionPane;
+public class Main {
+	//public static String[] read=null;
+	//TODO: make plural and singular nouns seperat.
+	public static void main(String[] args) throws InterruptedException, IOException {
+//words.book.solve("asdf",400);
+	System.out.println(words.Read_Write.structure(""));
+		String asdf = "walk the dog";
+		String[] test = asdf.split(" ");
+		String setence  = "this!";
+		 String ev =  "";
+for(int i=0;i<test.length;i++){
+		//System.out.print(words.Types.randomthing(words.Types.gettype(test[i]))+" ");
+		ev=ev+words.Types.randomthing(words.Types.gettype(test[i]))+" ";
+	}	
+	System.out.println(ev);
+	JOptionPane.showMessageDialog(null, ev);
+//System.out.println(words.Types.gettype("ball"));
+}
+}
+			
+				 
+			 
+			 
+			 
+			 
+			
+
+
+			 
+			 
+			 
+			 
+			 
+			 
 			 
 			 
 			 
@@ -149,7 +188,38 @@ public class Main {
 			 
 			 
 			 
-			
+			public static void getverbs(String body) throws FileNotFoundException, UnsupportedEncodingException{
+	PrintWriter verbs = new PrintWriter("verbs.txt", "UTF-8");
+	PrintWriter nouns = new PrintWriter("nouns.txt", "UTF-8");
+	PrintWriter adjectives = new PrintWriter("adjectives.txt", "UTF-8");
+	PrintWriter adverbs = new PrintWriter("adverbs.txt", "UTF-8");
+	PrintWriter determiners = new PrintWriter("determiners.txt", "UTF-8");
+	String[] allwords = body.split(" ");
+	for(int i=0; i<allwords.length;i++){
+		if(words.Types.isnoun(allwords[i].trim().replace(".", "").toLowerCase())){
+			nouns.write("\""+allwords[i]+"\",");
+		}
+		if(words.Types.isverb(allwords[i].trim().replace(".", "").toLowerCase())){
+			verbs.write("\""+allwords[i]+"\",");
+		}
+		if(words.Types.gettype(allwords[i].trim().replace(".", "").toLowerCase())=="adjective"){
+			adjectives.write("\""+allwords[i]+"\",");
+		}
+		if(words.Types.gettype(allwords[i].trim().replace(".", "").toLowerCase())=="determiner"){
+			determiners.write("\""+allwords[i]+"\",");
+		}
+		if(words.Types.isadverb(allwords[i].trim().replace(".", "").toLowerCase())){
+			adverbs.write("\""+allwords[i]+"\",");
+		}
+	}
+	
+	
+	nouns.close();
+	verbs.close();
+	adjectives.close();
+	adverbs.close();
+	determiners.close();
+}
 
 
 			 

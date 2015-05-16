@@ -12,9 +12,10 @@ public static String RemoveEndPunctuation(String word){
 }
 public static String structure(String words){
 	String ret = "";
-	String[] word = RemoveEndPunctuation(words).split(" ");
+	//String[] word = RemoveEndPunctuation(words).split(" ");
+	String[] word = (words).split(" ");
 	for(int i=0;i<word.length;i++){
-		ret=ret+" "+Types.gettype(word[i]);
+		ret=ret+" "+Types.gettype(word[i].replace(" ", ""));
 	}	
 	return ret;	
 }
